@@ -17,72 +17,54 @@
   }
   a { color: inherit; text-decoration: none; }
 
-  header {
-    display: flex;
-    align-items: flex-start;
-    padding: 50px 130px 0;
-    position: relative;
-  }
-  nav { text-transform: uppercase; font-size: 22px; line-height: 1.15; }
-  nav div { display: block; }
-  nav .row a + a { margin-left: 26px; }
-  nav a:hover, nav a.active { opacity: 0.65; }
+  header { padding: 45px 30px 0; text-align: center; }
   .logo {
-    position: absolute;
-    left: 50%;
-    top: 46px;
-    transform: translateX(-50%);
+    display: inline-block;
     text-transform: uppercase;
-    font-size: 38px;
-    line-height: 1.1;
-    white-space: nowrap;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
   }
 
-  main { max-width: 1110px; margin: 0 auto; padding: 150px 30px 0; }
-  main p { margin: 0 0 1.2em; }
-  .button-wrap { text-align: center; margin: 70px 0 0; }
+  main { max-width: 1000px; margin: 0 auto; padding: 130px 30px 0; }
+  main p { margin: 0; }
+  .button-wrap { text-align: center; margin-top: 60px; }
   a.button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 56px;
+    height: 50px;
     padding: 0 30px;
     border: 1px solid #ffffff;
     border-radius: 0;
-    font-size: 24px;
+    font-size: 20px;
     transition: background 0.2s, color 0.2s;
   }
   a.button:hover { background: #ffffff; color: #223525; }
 
-  .social { text-align: center; margin-top: 110px; }
+  .social { text-align: center; margin-top: 100px; }
   .social a { display: inline-block; margin: 0 22px; }
-  .social svg { width: 52px; height: 42px; fill: #ffffff; }
+  .social svg { width: 40px; height: 32px; fill: #ffffff; }
   .social a:hover svg { opacity: 0.65; }
 
   footer {
     text-align: center;
-    margin-top: 80px;
-    padding-bottom: 70px;
-    font-size: 20px;
+    margin-top: 70px;
+    padding-bottom: 60px;
+    font-size: 18px;
     color: #8fa392;
   }
 
-  @media (max-width: 900px) {
-    header { flex-direction: column; padding: 30px 24px 0; }
-    .logo { position: static; transform: none; margin-top: 28px; font-size: 28px; white-space: normal; }
-    nav { font-size: 18px; }
+  @media (max-width: 700px) {
+    header { padding-top: 30px; }
+    .logo { font-size: 22px; }
     main { padding-top: 80px; }
+    body, a.button { font-size: 18px; }
   }
 </style>
 </head>
 <body>
 <header>
-  <nav>
-    <div><a href="https://mfhager.eu/architecture">Architecture &amp; Urban Design</a></div>
-    <div><a href="https://mfhager.eu/computational">Computational Design &amp; Research</a></div>
-    <div><a href="https://mfhager.eu/photography">Photography &amp; Visual Narratives</a></div>
-    <div class="row"><a href="https://mfhager.eu/about">About</a><a href="https://mfhager.eu/contact">Contact</a></div>
-  </nav>
   <a class="logo" href="https://mfhager.eu">Michael Friedrich Hager</a>
 </header>
 
