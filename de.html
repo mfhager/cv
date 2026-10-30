@@ -3,44 +3,89 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lebenslauf anfordern</title>
-<meta http-equiv="refresh" content="2; url=mailto:contact@mfhager.eu?subject=Bitte%20um%20%C3%9Cbersendung%20Ihres%20CV&amp;body=Sehr%20geehrter%20Herr%20Hager%2C%0A%0ASie%20haben%20mein%20Interesse%20geweckt.%20Bitte%20senden%20Sie%20mir%20Ihren%20Lebenslauf.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">
+<title>Michael Friedrich Hager - Lebenslauf anfordern</title>
 <style>
   * { box-sizing: border-box; }
+  html, body { height: 100%; }
   body {
     margin: 0;
-    min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: #223525;
+    flex-direction: column;
     color: #ffffff;
-    font-family: "Futura", "Futura PT", "Jost", "Century Gothic", "Trebuchet MS", sans-serif;
+    background:
+      radial-gradient(ellipse at 20% 15%, #2f4a35 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 90%, #1a2a1d 0%, transparent 60%),
+      #223525;
+    font-family: "Futura PT", "Futura", "Jost", "Century Gothic", "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
     letter-spacing: 0.04em;
   }
-  main { padding: 2rem; max-width: 32rem; }
-  h1 { font-size: 1.6rem; font-weight: 400; margin: 0 0 1rem; color: #ffffff; }
-  p { font-size: 1rem; line-height: 1.6; margin: 0 0 2.5rem; color: #ffffff; }
-  a.button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border: 1px solid #ffffff;
+  header { padding: 2rem 2.5rem; }
+  header a {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.1rem;
-    transition: background 0.2s, color 0.2s;
+    letter-spacing: 0.08em;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .content { max-width: 36rem; }
+  h1 { font-size: 1.7rem; font-weight: 400; margin: 0 0 1.2rem; }
+  p { margin: 0 0 2.5rem; }
+  a.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    height: 50px;
+    padding: 0 30px;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background 0.25s, color 0.25s;
+  }
+  a.button svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    transition: transform 0.35s ease;
   }
   a.button:hover { background: #ffffff; color: #223525; }
-  small { display: block; margin-top: 3rem; font-size: 0.8rem; color: #ffffff; }
+  a.button:hover svg { transform: translate(4px, -4px) rotate(8deg); }
+  footer { padding: 2rem; text-align: center; font-size: 0.85rem; opacity: 0.8; }
 </style>
 </head>
 <body>
+<header>
+  <a href="https://mfhager.eu">Michael Friedrich Hager</a>
+</header>
 <main>
-  <h1>Lebenslauf anfordern</h1>
-  <p>Ihr Mailprogramm öffnet sich in Kürze mit einer vorbereiteten Nachricht.</p>
-  <a class="button" href="mailto:contact@mfhager.eu?subject=Bitte%20um%20%C3%9Cbersendung%20Ihres%20CV&amp;body=Sehr%20geehrter%20Herr%20Hager%2C%0A%0ASie%20haben%20mein%20Interesse%20geweckt.%20Bitte%20senden%20Sie%20mir%20Ihren%20Lebenslauf.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">Nachricht öffnen</a>
-  <small>© Michael Friedrich Hager</small>
+  <div class="content">
+    <h1>Lebenslauf anfordern</h1>
+    <p>Mit einem Klick von Ihnen öffnet sich Ihr Mailprogramm mit einer vorgefertigten Nachricht.</p>
+    <a class="button" href="mailto:contact@mfhager.eu?subject=Anfrage%20CV&amp;body=Sehr%20geehrter%20Herr%20Hager%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20Ihr%20Profil%20und%20bitte%20Sie%20um%20die%20%C3%9Cbersendung%20Ihres%20Lebenslaufs.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21 3 3 10.5l6.5 2.5L12 20l2.5-5.5L21 3z"/>
+        <path d="M9.5 13 21 3"/>
+      </svg>
+      Nachricht öffnen
+    </a>
+  </div>
 </main>
+<footer>Michael Friedrich Hager</footer>
 </body>
 </html>
