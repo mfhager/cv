@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Michael Friedrich Hager - Lebenslauf anfordern</title>
+<title>Michael Friedrich Hager - Anfrage Lebenslauf</title>
 <style>
   * { box-sizing: border-box; }
   html, body { min-height: 100%; }
@@ -12,37 +12,47 @@
     background: #223525;
     color: #ffffff;
     font-family: "Futura PT", "Futura", "Jost", "Century Gothic", "Trebuchet MS", sans-serif;
+    font-weight: 400;
     font-size: 20px;
     line-height: 1.5;
   }
   a { color: inherit; text-decoration: none; }
 
-  header { padding: 45px 30px 0; text-align: center; }
-  .logo {
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 28px;
-    line-height: 1.2;
-    letter-spacing: 0.01em;
-  }
-
-  main { max-width: 1000px; margin: 0 auto; padding: 130px 30px 0; }
-  main p { margin: 0; }
-  .button-wrap { text-align: center; margin-top: 60px; }
-  a.button {
+  .weighted {
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    font-weight: 500;
+    transition: font-weight 0.15s;
+  }
+  .weighted::after {
+    content: attr(data-text);
+    font-weight: 800;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    user-select: none;
+    pointer-events: none;
+  }
+  .weighted:hover { font-weight: 800; }
+
+  header { padding: 45px 30px 0; text-align: center; }
+  .logo { text-transform: uppercase; font-size: 28px; line-height: 1.2; }
+
+  main { max-width: 1000px; margin: 0 auto; padding: 130px 30px 0; text-align: center; }
+  main p { margin: 0; }
+  .button-wrap { margin-top: 60px; }
+  a.button {
     height: 50px;
     padding: 0 30px;
     border: 1px solid #ffffff;
     border-radius: 0;
     font-size: 20px;
-    transition: background 0.2s, color 0.2s;
+    justify-content: center;
   }
-  a.button:hover { background: #ffffff; color: #223525; }
+  a.button::after { height: 0; }
 
-  .social { text-align: center; margin-top: 100px; }
+  .social { margin-top: 100px; }
   .social a { display: inline-block; margin: 0 22px; }
   .social svg { width: 40px; height: 32px; fill: #ffffff; }
   .social a:hover svg { opacity: 0.65; }
@@ -52,7 +62,8 @@
     margin-top: 70px;
     padding-bottom: 60px;
     font-size: 18px;
-    color: #8fa392;
+    font-weight: 400;
+    color: #858585;
   }
 
   @media (max-width: 700px) {
@@ -65,13 +76,13 @@
 </head>
 <body>
 <header>
-  <a class="logo" href="https://mfhager.eu">Michael Friedrich Hager</a>
+  <a class="logo weighted" data-text="Michael Friedrich Hager" href="https://mfhager.eu">Michael Friedrich Hager</a>
 </header>
 
 <main>
-  <p>Mein Lebenslauf wird auf Anfrage versendet. Mit einem Klick von Ihnen öffnet sich Ihr Mailprogramm mit einer vorgefertigten Nachricht.</p>
+  <p>Mein Lebenslauf wird auf Anfrage versendet.<br>Mit einem Klick von Ihnen öffnet sich Ihr Mailprogramm mit einer vorgefertigten Nachricht.</p>
   <div class="button-wrap">
-    <a class="button" href="mailto:contact@mfhager.eu?subject=Anfrage%20Lebenslauf&amp;body=Sehr%20geehrter%20Herr%20Hager%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20Ihr%20Profil%20und%20bitte%20Sie%20um%20die%20%C3%9Cbersendung%20Ihres%20Lebenslaufs.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">Lebenslauf anfordern</a>
+    <a class="button weighted" data-text="Anfrage Lebenslauf" href="mailto:contact@mfhager.eu?subject=Anfrage%20CV&amp;body=Sehr%20geehrter%20Herr%20Hager%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20Ihr%20Profil%20und%20bitte%20Sie%20um%20die%20%C3%9Cbersendung%20Ihres%20Lebenslaufs.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">Anfrage Lebenslauf</a>
   </div>
 
   <div class="social">
