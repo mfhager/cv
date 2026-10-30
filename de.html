@@ -18,14 +18,33 @@
   }
   a { color: inherit; text-decoration: none; }
 
-  .weighted {
+  header { padding: 40px 30px 0; text-align: center; }
+  .logo {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  main { max-width: 1000px; margin: 0 auto; padding: 130px 30px 0; text-align: center; }
+  main p { margin: 0; }
+  .button-wrap { margin-top: 60px; }
+
+  a.button {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 30px;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    font-size: 20px;
     font-weight: 500;
-    transition: font-weight 0.15s;
+    transition: background 0.2s, color 0.2s;
   }
-  .weighted::after {
+  a.button::after {
     content: attr(data-text);
     font-weight: 800;
     height: 0;
@@ -34,23 +53,7 @@
     user-select: none;
     pointer-events: none;
   }
-  .weighted:hover { font-weight: 800; }
-
-  header { padding: 45px 30px 0; text-align: center; }
-  .logo { text-transform: uppercase; font-size: 28px; line-height: 1.2; }
-
-  main { max-width: 1000px; margin: 0 auto; padding: 130px 30px 0; text-align: center; }
-  main p { margin: 0; }
-  .button-wrap { margin-top: 60px; }
-  a.button {
-    height: 50px;
-    padding: 0 30px;
-    border: 1px solid #ffffff;
-    border-radius: 0;
-    font-size: 20px;
-    justify-content: center;
-  }
-  a.button::after { height: 0; }
+  a.button:hover { background: #ffffff; color: #223525; font-weight: 800; }
 
   .social { margin-top: 100px; }
   .social a { display: inline-block; margin: 0 22px; }
@@ -68,7 +71,7 @@
 
   @media (max-width: 700px) {
     header { padding-top: 30px; }
-    .logo { font-size: 22px; }
+    .logo { font-size: 24px; }
     main { padding-top: 80px; }
     body, a.button { font-size: 18px; }
   }
@@ -76,13 +79,13 @@
 </head>
 <body>
 <header>
-  <a class="logo weighted" data-text="Michael Friedrich Hager" href="https://mfhager.eu">Michael Friedrich Hager</a>
+  <a class="logo" href="https://mfhager.eu">Michael Friedrich Hager</a>
 </header>
 
 <main>
   <p>Mein Lebenslauf wird auf Anfrage versendet.<br>Mit einem Klick von Ihnen öffnet sich Ihr Mailprogramm mit einer vorgefertigten Nachricht.</p>
   <div class="button-wrap">
-    <a class="button weighted" data-text="Anfrage Lebenslauf" href="mailto:contact@mfhager.eu?subject=Anfrage%20CV&amp;body=Sehr%20geehrter%20Herr%20Hager%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20Ihr%20Profil%20und%20bitte%20Sie%20um%20die%20%C3%9Cbersendung%20Ihres%20Lebenslaufs.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">Anfrage Lebenslauf</a>
+    <a class="button" data-text="Anfrage Lebenslauf" href="mailto:contact@mfhager.eu?subject=Anfrage%20CV&amp;body=Sehr%20geehrter%20Herr%20Hager%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20Ihr%20Profil%20und%20bitte%20Sie%20um%20die%20%C3%9Cbersendung%20Ihres%20Lebenslaufs.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">Anfrage Lebenslauf</a>
   </div>
 
   <div class="social">
