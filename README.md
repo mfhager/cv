@@ -1,2 +1,2 @@
 # cv
-Curriculum vitae of Michael Friedrich Hager, architectural designer and computational design researcher based in Vienna.
+Lebenslauf von Michael Friedrich Hager. Angehender Architekt und Design Technologist in Wien: parametrische Workflows, reversible Holztragwerke, AI-Tools und Datensysteme für die AEC-Branche.
